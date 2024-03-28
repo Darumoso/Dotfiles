@@ -1,1 +1,3 @@
 --target=$HOME
+--ignore='pulse'
+--ignore='dconf'
