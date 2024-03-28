@@ -1,0 +1,116 @@
+* {
+    font-family: "FiraCode Nerd Font";
+    font-size: 13px;
+    min-height: 0;
+    padding: 0px;
+    margin: -1px;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#clock,
+#network,
+#battery,
+#pulseaudio,
+#tray,
+#workspaces,
+#window,
+#language {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 5px;
+    background: #1E1E2E;
+    color: #E3B4D8;
+}
+
+#clock {
+    margin-right: 5px;
+}
+
+#window {
+    margin-left: 5px;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+#workspaces button {
+    padding: 0;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.active {
+    background-color: #E3B4D8;
+    color: #1A1B26;
+}
+
+#workspaces button.urgent {
+    color: #E8748C;
+}
+
+#network.disconnected {
+    color: #E8748C;
+    border: 2px solid #E8748C;
+}
+
+#tray,
+#workspaces {
+    border: 2px solid #E3B4D8;
+}
+
+#keyboard-state {
+    background: #71CDC3;
+    color: #000000;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state>label {
+    padding: 0 0px;
+}
+
+#keyboard-state>label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#pulseaudio {
+    color: #EAD3A7;
+}
+
+#network {
+    color: #8AD0C6;
+}
+
+#language {
+    color: #A0D49B;
+}
+
+#custom-terminal,
+#custom-browser {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+#custom-files {
+    font-size: 17px;
+}
+
+#custom-apps {
+    font-size: 17px;
+    margin-left: 3px;
+    margin-right: 5px;
+    color: #E3B4D8;
+}

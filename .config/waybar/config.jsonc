@@ -1,0 +1,60 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": -90,
+    "modules-left": ["hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["custom/terminal", "custom/browser", "custom/apps", "tray", "pulseaudio", "network", "clock", "battery"],
+
+    // Custom modules
+    "custom/apps": {
+        "format": " ",
+        "on-click": "rofi -show drun",
+    },
+    "custom/browser": {
+        "format": "󰖟 ",
+        "on-click": "firefox",
+    },
+    "custom/terminal": {
+        "format": " ",
+        "on-click": "kitty",
+    },
+    // Modules configuration
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "warp-on-scroll": true,
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "format": " {icon} ",
+        "format-icons": {
+            "10": "0",
+        }
+    },
+    "hyprland/window": {
+        "format": "{title}",
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "format": "  {:%I:%M %p}",
+    },
+    "battery": {
+        "full-at": "80",
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "  {essid}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+    },
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": " {volume}%",
+        "on-click": "pavucontrol"
+    },
+}
